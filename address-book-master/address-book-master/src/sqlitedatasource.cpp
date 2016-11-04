@@ -109,7 +109,7 @@ void SQLiteDataSource::fillContactFromRow(sqlite3_stmt *s, Contact& c)
     c.id = sqlite3_column_int(s, 0);
     c.firstName = reinterpret_cast<const char*>(sqlite3_column_text(s, 1));
     c.lastName = reinterpret_cast<const char*>(sqlite3_column_text(s, 2));
-    c.phoneNumber = reinterpret_cast<const char*>(sqlite3_column_text(s, 3));
+    c.phoneNumber =reinterpret_cast<const char*>(sqlite3_column_text(s, 3));
     c.address = reinterpret_cast<const char*>(sqlite3_column_text(s, 4));
     c.email = reinterpret_cast<const char*>(sqlite3_column_text(s, 5));
 }

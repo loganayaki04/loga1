@@ -45,6 +45,19 @@ void QtAddressBookGUI::createWidgets()
     editContactButton = new QPushButton("Edit");
     deleteContactButton = new QPushButton("Delete");
 
+    newContactButton->setStyleSheet( "QPushButton {""background-color:blue;""}");
+    editContactButton->setStyleSheet( "QPushButton {""background-color:pink;""}");
+    deleteContactButton->setStyleSheet( "QPushButton {""background-color:green;""}");
+
+    newContactButton->setObjectName(QString::fromUtf8("newContactButton"));
+    newContactButton->setIcon(QIcon(QPixmap("C:/Users/Administrator/Downloads/address-book-master/address-book-master/Chrysanthemum.jpg")));
+
+    editContactButton->setObjectName(QString::fromUtf8("editContactButton"));
+    editContactButton->setIcon(QIcon(QPixmap("C:/Users/Administrator/Downloads/address-book-master/address-book-master/Chrysanthemum.jpg")));
+
+    deleteContactButton->setObjectName(QString::fromUtf8("deleteContactButton"));
+    deleteContactButton->setIcon(QIcon(QPixmap("C:/Users/Administrator/Downloads/address-book-master/address-book-master/Chrysanthemum.jpg")));
+
     QHBoxLayout *buttonLayout = new QHBoxLayout();
     buttonLayout->addWidget(newContactButton);
     buttonLayout->addWidget(editContactButton);
@@ -174,7 +187,6 @@ void QtAddressBookGUI::editContact()
     delete errDialog;
     delete editDialog;
 }
-
 void QtAddressBookGUI::deleteContact()
 {
     Contact::ContactId idToDelete = list->getSelectedContactId();

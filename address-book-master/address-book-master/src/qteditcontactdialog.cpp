@@ -5,7 +5,7 @@
 #include <QPushButton>
 #include <QVBoxLayout>
 #include <QHBoxLayout>
-
+#include <QWidget>
 
 QtEditContactDialog::QtEditContactDialog(Contact &c, 
                                         QWidget *parent,
@@ -23,7 +23,6 @@ QtEditContactDialog::QtEditContactDialog(Contact &c,
     buttonContainer->addWidget(okButton);
     buttonContainer->addWidget(cancelButton);
     mainContainer->addLayout(buttonContainer);
-
     connect(okButton, SIGNAL(clicked()), this, SLOT(accept()));
 
     connect(cancelButton, SIGNAL(clicked()), this, SLOT(reject()));
@@ -48,7 +47,7 @@ void QtEditContactDialog::accept()
     contactToEdit.firstName = contactForm->firstNameField->text().toStdString();
     contactToEdit.lastName = contactForm->lastNameField->text().toStdString();
     contactToEdit.address = contactForm->addressField->text().toStdString();
-    contactToEdit.phoneNumber = contactForm->phoneNumberField->text().toStdString();
+    contactToEdit.phoneNumber = contactForm->phoneNumberField->text().toInt();
     contactToEdit.email = contactForm->emailField->text().toStdString();
 
     QDialog::accept();

@@ -27,7 +27,6 @@ QtContactList::QtContactList(AddressBookModel &model, QWidget *parent) :
     populateList();
 
     setCurrentRow(0, QItemSelectionModel::SelectCurrent);
-
 }
 
 void QtContactList::populateList(Contact::ContactId selected)

@@ -4,6 +4,7 @@
 #include <QFormLayout>
 #include <QLabel>
 #include <QLineEdit>
+#include <QtWidgets>
 
 /***********************************************************************
     Class: QtContactForm
@@ -38,6 +39,8 @@ class QtContactForm : public QFormLayout
         QLineEdit *addressField;
         QLineEdit *phoneNumberField;
         QLineEdit *emailField;
+        QLineEdit lineEdit;
+        QPalette palette;
 
 };
 

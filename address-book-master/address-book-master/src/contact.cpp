@@ -1,5 +1,5 @@
 #include "contact.h"
-
+#include "QString"
 bool Contact::isValidToAdd() const
 {
     /*
@@ -13,6 +13,7 @@ bool Contact::isValidToAdd() const
 
     if(hasNames && !phoneNumber.empty())
     {
+
         return true;
     }
     else
@@ -20,6 +21,8 @@ bool Contact::isValidToAdd() const
         return false;
     }
 }
+
+
 
 bool Contact::isEmpty() const
 {
@@ -36,4 +39,4 @@ bool Contact::isEmpty() const
         return false;
     }
 }
-    
+

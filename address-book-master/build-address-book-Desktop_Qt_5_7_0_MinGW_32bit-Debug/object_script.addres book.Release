@@ -3,6 +3,7 @@ INPUT(
 ./src\tmp\contact.o
 ./src\tmp\dummydatasource.o
 ./src\tmp\main.o
+./src\tmp\sqlite3.o
 ./src\tmp\qtaddcontactdialog.o
 ./src\tmp\qtaddressbookgui.o
 ./src\tmp\qtcontactdetailview.o

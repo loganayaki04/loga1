@@ -10,7 +10,7 @@ MOC_DIR=src/tmp
 #LIBS+=-lsqlite3
 QT +=sql widgets
 TEMPLATE = app
-TARGET = addres-book
+TARGET = addres book
 DEPENDPATH += src
 INCLUDEPATH += . src
 
@@ -35,7 +35,7 @@ SOURCES += src/addressbookcontroller.cpp \
            src/contact.cpp \
            src/dummydatasource.cpp \
            src/main.cpp \
-           src/sqlite3.c \
+            src/sqlite3.c \
            src/qtaddcontactdialog.cpp \
            src/qtaddressbookgui.cpp \
            src/qtcontactdetailview.cpp \
